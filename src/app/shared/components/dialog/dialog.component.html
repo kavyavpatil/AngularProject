@@ -1,0 +1,69 @@
+<div class="dialog" ><div  fxlayout="row" fxlayoutalign="space-between center" fxlayoutgap="16px" style="margin-bottom: 24px; flex-direction: row; box-sizing: border-box; display: flex; place-content: center space-between; align-items: center;"><h3  class="card-title" style="margin-right: 16px;">Announcement Details</h3><span  tabindex="0" style="margin-right: 16px;"></span><button mat-icon-button="" mat-dialog-close="" class="mat-focus-indicator mat-tooltip-trigger btn-close mat-icon-button mat-button-base" type="button" aria-describedby="cdk-describedby-message-awp-1-28" cdk-describedby-host="awp-1"><span class="mat-button-wrapper"><mat-icon  role="img" class="mat-icon notranslate material-icons mat-ligature-font mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">close</mat-icon></span><span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span></button><!----></div>
+<span  class="dia" style="margin-bottom: 24px;">Please check the below FAQ's to know more about the User Role feature.</span>
+
+<mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+                       
+<mat-expansion-panel-header>
+    
+    <mat-panel-description>
+        What are User Roles? 
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <span  class="ann-answer" style="margin-bottom: 16px;">User roles is a feature that allows the Fleet Administrator to create custom roles based on a set of permissions and UI configurations.Once created, they can assign one of these custom roles to a given user. The user assigned to a specific role will inherit all the permissions and UI configurations that have been given to the defined role. </span><br><br>
+  <span  class="ann-answer">This feature allows one to manage user permissions in an organized or structured way. It is immensely helpful when one has to manage a large number of users in the system/portal.</span>
+</mat-expansion-panel>
+<mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+<mat-expansion-panel-header>
+    
+    <mat-panel-description>
+        How does it affect me as a portal user?
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <span  class="ann-answer" style="margin-bottom: 16px;">With the introduction of user roles in production deployment, the end user on the fleet portal may see some changes to the UI or in terms of the functionality that he/she has seen in the past. The user may no longer see some pages for which they no longer has permission to. </span><br><br>
+  <span  class="ann-answer">If the user does not see the page through which permissions to other users were given (applies to admin users in the fleet who had such access to earlier), he/she will have to contact the TSP customer support for more information.</span>
+</mat-expansion-panel>
+<mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+<mat-expansion-panel-header>
+    
+    <mat-panel-description>
+        Does it require any change from my side?
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <span  class="ann-answer" style="margin-bottom: 16px;">Yes, there are some actions required on your side if you are a user of the portal based on what role you belong to. Please check below what action is required from your end based on your role: </span><br><br>
+  <span  class="ann-answer"><b>If you are a Fleet Administrator -</b> Please share the list of users who act as Fleet Administrators in your fleet to the TSP/service provider.</span><br><br>
+  <span  class="ann-answer"><b>If you are a Fleet Manager or any other role -</b> You will be assigned the role of a Fleet Manager. This will give you all the permissions except for User Management. For more information, contact your Administrator.</span>
+</mat-expansion-panel>
+<mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+<mat-expansion-panel-header>
+    
+    <mat-panel-description>
+        What if I don't want to use User Roles?
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <span  class="ann-answer" style="margin-bottom: 16px;">From the next release onwards User roles feature will be the default way to manage users for all portals. The legacy way of managing permissions to each user in the portal will be deprecated. By default, we will follow the below rule to assign roles to users: </span><br><br>
+  <span  class="ann-answer"><b>Administrator Role -</b> Any user who has access to user management</span><br><br>
+  <span  class="ann-answer"><b>Fleet Manager Role -</b> Any user who doesn't have access to user management</span>
+
+</mat-expansion-panel>
+<mat-expansion-panel (opened)="panelOpenState = true"
+(closed)="panelOpenState = false">
+<mat-expansion-panel-header>
+    
+    <mat-panel-description>
+        Whom to contact if I face any issues with the new feature?
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  
+
+  <span  class="ann-answer">Please contact your Administrator/Service Provider, if you are facing any issues with your login post-user role feature is released in production.</span>
+
+</mat-expansion-panel>
+
+
+
+
+

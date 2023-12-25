@@ -1,0 +1,83 @@
+.side-nav {
+  height: 600px;
+}
+
+mat-drawer {
+  background-color: white;
+
+  width: 170px;
+}
+
+.example-container {
+  color: black;
+  background-color: lightcyan;
+}
+
+.edittrip {
+  background-color: black;
+  color: white;
+}
+img {
+  size: 10px;
+}
+
+mat-icon {
+  size: 50px;
+}
+mat-card {
+  margin-bottom: 34px;
+  margin-left: 30px;
+  margin-right: 10px;
+}
+.example-container,
+.edittrip {
+  margin-left: 1px;
+  margin-bottom: 5%;
+}
+.list {
+  margin-top: 3%;
+  margin-left: 5%;
+  margin-bottom: 2%;
+}
+.button {
+  margin-top: 3%;
+  // margin-right: 5%;
+  margin-left: 2%;
+  margin-bottom: 1%;
+}
+.head {
+  margin-bottom: 1%;
+}
+.inst {
+  width: 2%;
+}
+
+mat-card-title {
+  margin-left: 30px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+mat-card-subtitle {
+  margin-left: 30px;
+  margin-bottom: 10px;
+  width: 90%;
+}
+p {
+  margin-bottom: 2px;
+  color: black;
+  margin-top: 20px;
+}
+
+.title {
+  width: 100px;
+}
+
+.basic-info {
+  padding: 3%;
+}
+.advanced-info {
+  padding: 3%;
+}
+.send {
+  margin-right: 1%;
+}

@@ -1,0 +1,41 @@
+.side-nav {
+  height: 200px;
+}
+
+mat-drawer {
+  background-color: white;
+  //   height: 1000px;
+  width: 150px;
+}
+
+.example-container {
+  color: black;
+  background-color: lightcyan;
+  height: 560px;
+}
+
+#map {
+  height: 700px;
+  width: 1200px;
+  margin-left: 10px;
+}
+
+.mapboxgl-marker {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+// .marker-blue {
+//   background-color: blue; /* Change color for 'heavy' duty type */
+// }
+
+// .marker-green {
+//   background-color: green; /* Change color for 'light' duty type */
+// }
+
+// .marker-red {
+//   background-color: red; /* Default color */
+// }

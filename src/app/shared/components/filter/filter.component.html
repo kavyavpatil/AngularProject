@@ -1,0 +1,43 @@
+<div class="fielddetails" fxLayout="row" fxLayoutGap="25px"   flex-direction= "row" box-sizing= border-box  fxLayoutAlign="space-between end" fxlayout.xs="column" fxlayoutalign="end center" fxlayoutalign.xs="start stretch" style="margin-right:-25px;" >
+
+      <mat-form-field class="durationfield"   >
+        <mat-label>Select Duration</mat-label>
+        <mat-select  [(value)]="durationDays" (selectionChange)="durationChange($event)"  >
+          <mat-option *ngFor="let duration of  DurationList" [value]="duration.days" >
+         
+            {{ duration.title }}
+           
+            </mat-option>
+        
+            </mat-select>
+      </mat-form-field>
+
+      
+
+
+   
+      <mat-form-field class="fieldtag">
+        <mat-label>Select Tag</mat-label>
+        <mat-select [(value)]="tagtagId" (selectionChange)="selectionChange($event)">
+          <mat-optgroup *ngFor="let group of SelectedTags" [label]="group.attributeName">
+            <mat-option *ngFor="let tag of group.tag" [value]="tag.tagId"  >
+              {{tag.tagName}}
+            </mat-option>
+          </mat-optgroup>
+        </mat-select>
+      </mat-form-field>
+  
+</div>
+
+<!-- fxLayoutAlign="space-between end" fxlayout.xs="column" fxlayoutalign="end center" fxlayoutalign.xs="start stretch" style="margin-right:-25px;"  -->
+<!-- <mat-form-field class="tagfield"   >
+  <mat-label>Select Tags</mat-label>
+  <mat-select  [(value)]="statsstagId" (selectionChange)="selectedtagChange($event)"  >
+    <mat-option *ngFor="let statss of  statsLocationdetails " [value]="statss.tagId" >
+   
+      {{ statss.tagName }}
+     
+      </mat-option>
+  
+      </mat-select>
+</mat-form-field> -->

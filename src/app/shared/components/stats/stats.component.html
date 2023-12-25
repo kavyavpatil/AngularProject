@@ -1,0 +1,66 @@
+<div
+  class="stats"
+  fxLayout="row wrap"
+  fxLayout.xs="row"
+  fxLayoutAlign="space-around center"
+  fxLayoutGap="5%"
+>
+  <!-- <div  fxlayout="row" fxlayout.md="column" fxlayout.sm="column" fxlayout.xs="column" fxlayoutalign="space-between stretch" fxlayoutalign.xs="start stretch" fxlayoutgap="4px" class="stats" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: stretch space-between; align-items: stretch; max-height: 100%;">  -->
+
+  <!-- <mat-card  *ngFor="let stats of statsDetails" fxFlex="calc(25%-25px)" fxFlex.sm="calc(10%-25px)" fxFlex="72" style="margin-left: 10px;" fxflex="80" class="mat-card mat-focus-indicator stats-card" style="margin-right: 24px; flex: 1 1 100%; box-sizing: border-box; max-width: 30%;"> -->
+  <mat-card
+    *ngFor="let stats of statsDetails"
+    fxFlex="calc(5%-15px)"
+    style="max-width: 50%"
+  >
+    <mat-card-header>
+      <mat-card-subtitle>{{ stats.subtitle }} </mat-card-subtitle>
+      <mat-card-title>{{ stats.title }}</mat-card-title>
+    </mat-card-header>
+
+    <span class="flex-spacer"></span>
+  </mat-card>
+</div>
+<!-- </div> -->
+<!-- <div fxLayout="row wrap" fxLayout.xs="row" fxLayoutAlign="space-around center"  fxLayoutGap="55px">
+  <div  fxlayout="row" fxlayout.md="column" fxlayout.sm="column" fxlayout.xs="column" fxlayoutalign="space-between stretch" fxlayoutalign.xs="start stretch" fxlayoutgap="24px" class="stats" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: stretch space-between; align-items: stretch; max-height: 100%;"> 
+  <mat-card  *ngFor="let stattag of statsTag "fxFlex="calc(13%-25px)" fxFlex.sm="calc(10%-25px)" fxFlex="32" style="margin-left: 10px;" fxflex="50" class="mat-card mat-focus-indicator stats-card" style="margin-right: 24px; flex: 1 1 100%; box-sizing: border-box; max-width: 20%;" >
+    <mat-card-header>
+          <mat-card-subtitle>{{stattag.subtitle}}</mat-card-subtitle>
+          <mat-card-title>{{stattag.title}}</mat-card-title>
+       
+    </mat-card-header>
+  <span class="flex-spacer"></span>
+  </mat-card>
+  </div>
+  </div >  -->
+
+<!-- <div fxLayout="row wrap" fxLayout.xs="row" fxLayoutAlign="space-around center"  fxLayoutGap="55px">
+    <div  fxlayout="row" fxlayout.md="column" fxlayout.sm="column" fxlayout.xs="column" fxlayoutalign="space-between stretch" fxlayoutalign.xs="start stretch" fxlayoutgap="24px" class="stats" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: stretch space-between; align-items: stretch; max-height: 100%;"> -->
+
+<!-- fxFlex="calc(13%-25px)" fxFlex.sm="calc(10%-25px)" fxFlex="32" style="margin-left: 10px;" fxflex="50" class="mat-card mat-focus-indicator stats-card" style="margin-right: 24px; flex: 1 1 100%; box-sizing: border-box; max-width: 20%;" -->
+
+<!-- <div fxLayout="row wrap" fxLayout.xs="row" fxLayoutAlign="space-around center"  fxLayoutGap="55px">
+        <div  fxlayout="row" fxlayout.md="column" fxlayout.sm="column" fxlayout.xs="column" fxlayoutalign="space-between stretch" fxlayoutalign.xs="start stretch" fxlayoutgap="24px" class="stats" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: stretch space-between; align-items: stretch; max-height: 100%;"> 
+        <mat-card  *ngFor="let stat of statsLocation"fxFlex="calc(13%-25px)" fxFlex.sm="calc(10%-25px)" fxFlex="32" style="margin-left: 10px;" fxflex="50" class="mat-card mat-focus-indicator stats-card" style="margin-right: 24px; flex: 1 1 100%; box-sizing: border-box; max-width: 20%;" >
+          <mat-card-header>
+                <mat-card-subtitle>{{stat.subtitle}}</mat-card-subtitle>
+                <mat-card-title>{{stat.title}}</mat-card-title>
+             
+          </mat-card-header>
+        <span class="flex-spacer"></span>
+        </mat-card>
+        </div>
+        </div> -->
+<!-- <div fxLayout="row wrap" fxLayout.xs="row" fxLayoutAlign="space-around center"  fxLayoutGap="55px">
+          <div  fxlayout="row" fxlayout.md="column" fxlayout.sm="column" fxlayout.xs="column" fxlayoutalign="space-between stretch" fxlayoutalign.xs="start stretch" fxlayoutgap="24px" class="stats" style="flex-direction: row; box-sizing: border-box; display: flex; place-content: stretch space-between; align-items: stretch; max-height: 100%;"> 
+          <mat-card  *ngFor="let stattag of statsTag "fxFlex="calc(13%-25px)" fxFlex.sm="calc(10%-25px)" fxFlex="32" style="margin-left: 10px;" fxflex="50" class="mat-card mat-focus-indicator stats-card" style="margin-right: 24px; flex: 1 1 100%; box-sizing: border-box; max-width: 20%;" >
+            <mat-card-header>
+                  <mat-card-subtitle>{{stattag.subtitle}}</mat-card-subtitle>
+                  <mat-card-title>{{stattag.title}}</mat-card-title>
+               
+            </mat-card-header>
+          <span class="flex-spacer"></span>
+          </mat-card>
+          </div>
+          </div> -->

@@ -1,0 +1,59 @@
+<div
+  fxlayout="row"
+  fxlayout.md="column"
+  fxlayout.sm="column"
+  fxlayout.xs="column"
+  fxlayoutgap="24px"
+  fxlayoutalign="space-between stretch"
+>
+  <div class="card">
+    <h1>{{ tableName }}</h1>
+
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="assetId">
+          <th mat-header-cell *matHeaderCellDef>Asset ID</th>
+          <td mat-cell *matCellDef="let element">{{ element.assetid }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="tags">
+          <th mat-header-cell *matHeaderCellDef>Tags</th>
+          <td mat-cell *matCellDef="let element">{{ element.tags }}</td>
+        </ng-container>
+        <ng-container matColumnDef="derviceId">
+          <th mat-header-cell *matHeaderCellDef>Dervice ID</th>
+          <td mat-cell *matCellDef="let element">{{ element.derviceid }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="dutyType">
+          <th mat-header-cell *matHeaderCellDef>Duty Type</th>
+          <td mat-cell *matCellDef="let element">{{ element.dutytype }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="defaultDeviceId">
+          <th mat-header-cell *matHeaderCellDef>Default Device ID</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.defaultdeviceid }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef>Action</th>
+          <td mat-cell *matCellDef="let element">
+            <mat-icon (click)="editadd()">saveAlt</mat-icon>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+
+      <mat-paginator
+        [pageSizeOptions]="[5, 10, 20]"
+        showFirstLastButtons
+        aria-label="Select page of periodic elements"
+      >
+      </mat-paginator>
+    </div>
+  </div>
+</div>

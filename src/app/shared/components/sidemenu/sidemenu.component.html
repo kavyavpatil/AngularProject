@@ -1,0 +1,202 @@
+<!--<mat-nav-list>
+    <mat-list-item *ngFor="let menu of sidemenu " >
+      
+      <a class="nav-link" routerLink="/home">
+       <button mat-icon-button  (click)="side()" >
+          {{menu.name1}}
+        </button>
+       </a>
+       <a class="nav-link" routerLink="/assets">
+        <button mat-icon-button  (click)="side()" >
+         {{menu.name2}}  </button>
+        </a>
+
+        
+        
+       
+
+       
+    
+    
+  
+       
+    </mat-list-item>
+  </mat-nav-list>
+  
+
+
+  <!--<mat-list>
+    <mat-nav-list>
+      <a mat-list-item  *ngFor="let menu of sidemenu" [activated]="menu.isActive">{{ menu.name }}</a>
+    </mat-nav-list>
+  </mat-list>
+
+
+  <mat-nav-list>
+    <mat-list-item *ngFor="let menu of sidemenu" [activated]="menu.isActive">
+       <a matListItemTitle href="...">{{ menu.name }}</a>
+       <button mat-icon-button (click)="side()" matListItemMeta>
+          <mat-icon>home</mat-icon>
+       </button>
+    </mat-list-item>
+  </mat-nav-list>-->
+  
+
+  <!--<button mat-icon-button>
+    <li class="nav-list">
+     <a class="nav-link" routerLink="/home">Home</a> 
+     <mat-icon>home</mat-icon>
+    </li>
+   </button>
+   <button mat-icon-button>
+    <li class="nav-list">
+     <a class="nav-link" routerLink="/assets">Assets</a> 
+     <mat-icon>home</mat-icon>
+    </li>
+   </button>-->
+   
+          <!--<mat-list role="list" *ngFor="let menu of sidemenu">
+            <button mat-button (click)="side()"   >{{menu.name}}</button>
+          </mat-list>-->
+
+          
+          <!--<mat-nav-list>
+            <mat-list-item *ngFor="let menu of sidemenu">
+
+               <button mat-icon-button (click)="side(menu)"[ngClass]="{'avtive-button': menu}" >
+                {{ menu.name }}
+                  
+               </button>
+               
+            </mat-list-item>
+            
+          </mat-nav-list>-->
+          
+
+        
+            
+            
+
+            
+            
+         
+
+          <!--<div >
+            <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon " [routerLink]="['/home']" >
+                <mat-icon>home</mat-icon><span>Home</span></button>
+              
+              <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" [routerLink]="['/assets']">
+                <mat-icon>local_shipping</mat-icon>
+              </button>
+              <span>Assets</span>
+            
+
+        </div>-->
+
+        <!--<mat-sidenav-container class="container">
+          <mat-sidenav #sidebar mode="side" opened="">
+              
+            <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon " [routerLink]="['/home']" >
+              <mat-icon>home</mat-icon></button>
+            
+            <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" [routerLink]="['/assets']">
+              <mat-icon>local_shipping</mat-icon>
+            </button>
+              
+          </mat-sidenav>
+          <mat-sidenav-content>
+          <div>
+          <div class="main">
+              <router-outlet></router-outlet>
+      
+          </div>
+      </div>
+          </mat-sidenav-content>
+      </mat-sidenav-container>-->
+
+      <!--<button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon " [routerLink]="['/home']" >
+        <mat-icon>home</mat-icon></button>
+      
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" [routerLink]="['/assets']">
+        <mat-icon>local_shipping</mat-icon>
+      </button>-->
+      <!--<mat-nav-list>
+        <mat-list-item *ngFor="let menu of sidemenu">
+          <button mat-icon-button (click)="side(menu)" [routerLink]="['/home']" routerLinkActive="active" >
+            {{menu.name}}
+            <mat-icon>home</mat-icon>
+          </button>
+          
+
+
+           
+           
+        </mat-list-item>
+        
+      </mat-nav-list>-->
+
+      <!--<mat-nav-list>
+        <mat-list-item *ngFor="let menu of sidemenuList" >
+          <button>
+           <a  [routerLink]="['/home']" routerLinkActive="router-link-active" >{{ menu.name }} </a>
+           <a  [routerLink]="['/assets']" routerLinkActive="router-link-active">{{ menu.name }}<mat-icon>home</mat-icon></a></button>
+           
+              
+          
+        </mat-list-item>
+      </mat-nav-list>
+      <mar-list role="list" *ngFor="let menu of sidemenulist">
+      {{menu.name}}
+      </mar-list>-->
+      <!--<button mat-icon-button (click)="side(menu)" >-->
+        
+        
+         
+        
+      
+      
+        <!--<mat-drawer-container class="example-container" >
+          <mat-drawer #sideMenuOpen mode="side"  ></mat-drawer>
+          <mat-drawer-content>
+            <div class="example-sidenav-content">
+                    
+              <mat-list  role="list " *ngFor="let menu of sidemenuList" >
+       
+                <button mat-button (click)="menulist(menu)" [ngClass]="{'active-button': menu === selectedMenuItem}"><p>{{menu}}</p></button>
+                    
+                
+              </mat-list>
+            </div>
+          </mat-drawer-content>
+        </mat-drawer-container>-->
+
+        <mat-list  role="list" *ngFor="let menu of sidemenuList" >
+       
+          <button mat-button (click)="menulist(menu)" [ngClass]="{'active-button': menu === selectedMenuItem}"><p>{{menu}}</p></button>
+              
+          
+        </mat-list>
+     
+      
+      
+          
+          
+
+          
+            <!--<mat-sidenav-container class="example-container">
+                <mat-sidenav #sidenav >
+                  
+                </mat-sidenav>
+              
+                <div class="example-sidenav-content">
+                    
+                  <mat-list  role="list " *ngFor="let menu of sidemenuList" >
+           
+                    <button mat-button (click)="menulist(menu)" [ngClass]="{'active-button': menu === selectedMenuItem}"><p>{{menu}}</p></button>
+                        
+                    
+                  </mat-list>
+                </div>
+              
+              </mat-sidenav-container>-->
+            

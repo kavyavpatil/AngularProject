@@ -1,0 +1,27 @@
+
+
+       
+       <!-- <div class="container">
+        <app-header [sidenav]="sidenav"></app-header>
+        <div fxLayout>
+            <mat-sidenav-container>
+                <mat-sidenav  #sidenav>
+            <div class="side-nav" fxFlex="50%" fxLayout="column"><app-sidemenu></app-sidemenu></div></mat-sidenav>
+                  <mat-sidenav-content> 
+                    
+             
+            
+            </mat-sidenav-content>
+    
+           
+        </mat-sidenav-container>
+    
+        </div> 
+        </div> -->
+
+        <app-header (ismenusidelistEmit)="drawer.toggle()"></app-header>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <app-sidemenu></app-sidemenu>
+  </mat-drawer>
+  </mat-drawer-container>

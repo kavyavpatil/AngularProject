@@ -1,0 +1,60 @@
+<!-- <div mat-dialog-content>
+   Display form data or any other content 
+  <p>Received form value: {{ dialogData | json }}</p>
+</div>
+<div mat-dialog-actions class="dio" fxLayoutAlign="end center">
+  <button mat-button [mat-dialog-close]="true">Close</button>
+</div> -->
+<div mat-dialog-content>
+  <div class="columns-container">
+    <div fxLayout="row" fxLayoutGap="50px">
+      <div fxLayout="column">
+        <strong>Basic Information</strong>
+        <p><strong>Asset Id:</strong> {{ dialogData.assetId }}</p>
+        <p><strong>DutyType:</strong> {{ dialogData.dutyType }}</p>
+        <p><strong>Installer:</strong> {{ dialogData.installer }}</p>
+        <p>
+          <strong>InstallationDuration:</strong>
+          {{ dialogData.installationDuration }}
+        </p>
+        <!-- Other fields... -->
+      </div>
+      <div fxLayout="column">
+        <p></p>
+        <p><strong>Derive Id:</strong> {{ dialogData.derviceId }}</p>
+        <p>
+          <strong>DefaultDeviceId:</strong> {{ dialogData.defaultDeviceId }}
+        </p>
+        <p>
+          <strong>installationTimeStamp:</strong>
+          {{ dialogData.installationTimeStamp }}
+        </p>
+
+        <!-- Other fields... -->
+      </div>
+    </div>
+    <div class="dialogdata">
+      <div fxLayout="row" fxLayoutGap="130px">
+        <div fxLayout="column">
+          <strong>Advance Information</strong>
+          <p><strong>Sdk Version:</strong> {{ dialogData.sdkVersion }}</p>
+          <p><strong>Tags:</strong> {{ dialogData.tags }}</p>
+          <p><strong>Alert Volume:</strong> {{ dialogData.alertVolume }}</p>
+        </div>
+        <div fxLayout="column">
+          <p></p>
+          <p>
+            <strong>Firmware Version:</strong> {{ dialogData.firmwareVersion }}
+          </p>
+          <p>
+            <strong>Driver Side Selection:</strong>
+            {{ dialogData.driverSideSelection }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div mat-dialog-actions class="dio" fxLayoutAlign="end center">
+  <button mat-button [mat-dialog-close]="true">Close</button>
+</div>

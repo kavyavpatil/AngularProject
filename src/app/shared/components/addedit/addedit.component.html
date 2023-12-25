@@ -1,0 +1,332 @@
+<app-header (ismenusidelistEmit)="drawer.toggle()"></app-header>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side" opened>
+    <app-sidemenu></app-sidemenu>
+  </mat-drawer>
+  <mat-card-content>
+    <div class="containerss">
+      <div fxLayout="column" class="edittrip">
+        <div fxLayout="row">
+          <div fxLayout="column" fxLayoutAlign="start center" class="list">
+            <mat-icon (click)="backtohome()">keyboard_backspace</mat-icon>
+          </div>
+          <div fxLayout="column" class="button">
+            <strong> Installation Report </strong>
+          </div>
+        </div>
+      </div>
+
+      <form
+        fxLayout="column"
+        autocomplete="off"
+        novalidate
+        [formGroup]="assetForm"
+      >
+        <!-- Basic info start -->
+        <mat-card
+          fxLayout="row"
+          fxLayout.sm="column"
+          fxLayoutAlign="space-between start"
+          fxLayoutGap="96px"
+          fxLayoutGap.sm="24px"
+        >
+          <div class="basic-info" fxLayoutGap="77px">
+            <div
+              fxLayout="column"
+              fxLayoutGap="9px"
+              fxFlex="45"
+              fxLayoutAlign="start "
+            >
+              <strong style="margin-left: 10%" class="head"
+                >Basic Information</strong
+              >
+              <span class="sub-text"
+                >Information related to the device , installer and other
+                important details.</span
+              >
+            </div>
+
+            <div fxFlex fxLayout="column" style="width: 50%">
+              <div fxLayout="row" fxLayoutGap="54px">
+                <!-- Asset ID -->
+                <mat-form-field appearance="fill" fxFlex>
+                  <mat-label>Asset ID</mat-label>
+                  <input
+                    matInput
+                    formControlName="assetId"
+                    type="text"
+                    name="assetId"
+                    type="text"
+                  />
+                  <mat-error> Asset ID is <strong>required</strong></mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" fxFlex>
+                  <mat-label>Device ID</mat-label>
+                  <input
+                    matInput
+                    formControlName="derviceId"
+                    type="text"
+                    name="deviceId"
+                    type="text"
+                    maxlength="15"
+                  />
+                  <mat-error> Device Id is <strong>required</strong></mat-error>
+                </mat-form-field>
+              </div>
+              <div fxLayout="row" fxLayoutGap="54px">
+                <mat-form-field>
+                  <mat-label>Data Type</mat-label>
+                  <mat-select formControlName="dutyType">
+                    <mat-option
+                      *ngFor="let topping of dutyTypeList"
+                      [value]="topping"
+                      >{{ topping }}</mat-option
+                    >
+                  </mat-select>
+                  <mat-error> Data Type is <strong>required</strong></mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill" fxFlex>
+                  <mat-label>Default Device Id</mat-label>
+                  <input
+                    matInput
+                    formControlName="defaultDeviceId"
+                    type="text"
+                    name="defaultDeviceId"
+                    type="text"
+                    maxlength="15"
+                  />
+                  <mat-error>
+                    Default Device Id is <strong>required</strong></mat-error
+                  >
+                </mat-form-field>
+              </div>
+              <div fxLayout="row" fxLayoutGap="54px">
+                <mat-form-field appearance="fill" fxFlex>
+                  <mat-label>Installer</mat-label>
+                  <input
+                    matInput
+                    formControlName="installer"
+                    type="text"
+                    name="installer"
+                    type="text"
+                    maxlength="15"
+                  />
+                  <mat-error> Installer is <strong>required</strong></mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" fxFlex>
+                  <mat-label>InstallationTimeStamp</mat-label>
+                  <input
+                    matInput
+                    formControlName="installationTimeStamp"
+                    name="installationTimeStamp"
+                    maxlength="25"
+                    [matDatepicker]="picker"
+                  />
+                  <mat-datepicker-toggle
+                    matIconSuffix
+                    [for]="picker"
+                  ></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                  <mat-error>
+                    installationTimeStamp is
+                    <strong>required</strong></mat-error
+                  >
+                </mat-form-field>
+              </div>
+
+              <div style="font-size: 54px">
+                <mat-form-field>
+                  <mat-label>Installation Duration</mat-label>
+                  <input
+                    matInput
+                    formControlName="installationDuration"
+                    type="text"
+                    name="installationDuration"
+                    maxlength="10"
+                  />
+                  <!-- <mat-error
+                    *ngIf="
+                      assetForm.get('installationDuration')?.invalid &&
+                      assetForm.get('installationDuration')?.touched
+                    "
+                  >
+                    <div
+                      *ngIf="
+                        assetForm
+                          .get('installationDuration')
+                          ?.hasError('required')
+                      "
+                    >
+                      InstallationDuration is required.
+                    </div>
+                    <div
+                      *ngIf="
+                        assetForm
+                          .get('installationDuration')
+                          ?.hasError('maxlength')
+                      "
+                    >
+                      InstallationDuration must be string of maxlength 10.
+                    </div>
+                  </mat-error> -->
+                  <mat-error>
+                    InstallationDuration is <strong>required</strong></mat-error
+                  >
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+        </mat-card>
+        <!-- Basic info end -->
+
+        <!-- Advanced info start -->
+        <mat-card
+          fxLayout="row"
+          fxLayout.sm="column"
+          fxLayoutAlign="space-between start"
+          fxLayoutGap="96px"
+          fxLayoutGap.sm="24px"
+        >
+          <div class="basic-info" fxLayoutGap="77px">
+            <div
+              fxLayout="column"
+              fxLayoutGap="9px"
+              fxFlex="45"
+              fxLayoutAlign="start"
+            >
+              <strong style="margin-left: 10%">Advance Information</strong>
+              <span class="sub-text"
+                >Information related to the deviceAPK , Firmware version and
+                other details.</span
+              >
+            </div>
+
+            <div fxFlex fxLayout="column" style="width: 120%">
+              <div fxLayout="row" fxLayoutGap="54px">
+                <!-- Asset ID -->
+                <mat-form-field appearance="fill" fxFlex>
+                  <mat-label>SdkVersion</mat-label>
+                  <input
+                    matInput
+                    formControlName="sdkVersion"
+                    type="text"
+                    name="sdkVersion"
+                    type="text"
+                  />
+                  <!-- <mat-error *ngIf="assetForm.get('sdkVersion')?.invalid">
+                    <div
+                      *ngIf="assetForm.get('sdkVersion')?.hasError('required')"
+                    >
+                      sdkVersion is required.
+                    </div>
+                  </mat-error> -->
+                  <!-- @if (assetForm.hasError('required')) -->
+                  <mat-error>sdkVersion is <strong>required</strong></mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill" fxFlex>
+                  <mat-label
+                    >FirmwareVersion
+                    <!-- {{
+                      assetForm.get("firmwareVersion")?.hasError("required")
+                    }}-->
+                  </mat-label>
+
+                  <input
+                    matInput
+                    formControlName="firmwareVersion"
+                    type="text"
+                    name="firmwareVersion"
+                  />
+                  <!-- <mat-error
+                    *ngIf="
+                      assetForm.get('firmwareVersion')?.hasError('required')
+                    "
+                  >
+                    ddddddddddddddddddddddddd
+                  </mat-error> -->
+                  <!-- <mat-error
+                    >FirmwareVersion is <strong>required</strong></mat-error
+                  > -->
+                  <mat-error *ngIf="assetForm.invalid">
+                    FirmwareVersion is required with in the maxlength
+                  </mat-error>
+                </mat-form-field>
+              </div>
+
+              <div fxLayout="row" fxLayoutGap="54px">
+                <mat-form-field>
+                  <mat-label>Tags</mat-label>
+
+                  <mat-select formControlName="tags" multiple>
+                    <mat-option
+                      *ngFor="let topping of tagsList"
+                      [value]="topping"
+                      >{{ topping }}</mat-option
+                    >
+                  </mat-select>
+                  <mat-error>tags is <strong>required</strong></mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill" fxFlex>
+                  <mat-label>Alert Volume</mat-label>
+                  <input
+                    matInput
+                    formControlName="alertVolume"
+                    type="text"
+                    name="alertVolume"
+                    type="text"
+                    maxlength="10"
+                  />
+                  <!-- <mat-error *ngIf="assetForm.get('alertVolume')?.invalid">
+                    <div
+                      *ngIf="assetForm.get('alertVolume')?.hasError('required')"
+                    >
+                      Alert volume is required.
+                    </div>
+                    
+                  </mat-error> -->
+                  <!-- <mat-error
+                    >Alert volume is <strong>required</strong></mat-error
+                  > -->
+                  <mat-error *ngIf="assetForm.invalid">
+                    Alert volume is required</mat-error
+                  >
+                </mat-form-field>
+              </div>
+              <div fxLayout="row" fxLayoutGap="20px">
+                <mat-form-field>
+                  <mat-label>Driver Side Selection</mat-label>
+                  <mat-select formControlName="driverSideSelection">
+                    <mat-option
+                      *ngFor="let topping of driverSideSelectionList"
+                      [value]="topping"
+                      >{{ topping }}</mat-option
+                    >
+                  </mat-select>
+                  <mat-error
+                    >Driver Side Selection is
+                    <strong>required</strong></mat-error
+                  >
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+        </mat-card>
+      </form>
+      <div fxLayoutAlign="end center" class="send">
+        <button
+          mat-flat-button
+          color="accent"
+          (click)="savedetails()"
+          [disabled]="assetForm.invalid"
+        >
+          Save
+        </button>
+      </div>
+      <!-- </form> -->
+    </div>
+  </mat-card-content>
+</mat-drawer-container>
+
+<!-- [disabled]="assetForm.invalid" -->

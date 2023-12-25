@@ -1,0 +1,47 @@
+<app-header (ismenusidelistEmit)="drawer.toggle()"></app-header>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <app-sidemenu></app-sidemenu>
+  </mat-drawer>
+  <mat-card-content>
+    <div class="container" fxFlex="90" fxLayout="column" fxLayoutGap="20">
+      <div fxLayout="row">
+        <app-announcement></app-announcement>
+      </div>
+      <app-filter
+        (durationChangeValue)="durationOption($event)"
+        (selectedChangetagValue)="selectedtagOption($event)"
+        (selectedChangeValue)="setectedOption($event)"
+        [DurationList]="DurationList"
+        [statsLocationdetails]="statsLocationdetails"
+        [SelectedTags]="SelectedTags"
+      ></app-filter>
+
+      <!-- [DurationList]="DurationList" [SelectedTags]="SelectedTags" -->
+      <!-- (onDurationed)="durationOption($event)" [statsDetails]="statsDetails" -->
+
+      <app-stats
+        [statsDetails]="statsDetails"
+        [statsLocation]="statsLocation"
+        [statsTag]="statsTag"
+      ></app-stats>
+      <!-- <div fxLayout="row" fxLayoutGap="27" class="containerevent">
+      <div fxLayout="column" >
+      <app-assetslist [assetslistdetails]="assetslists"></app-assetslist>
+      </div>
+    </div> -->
+
+      <div fxLayout="row" class="containerevent">
+        <div fxLayout="column">
+          <app-assetslist [assetsList]="assetsList"></app-assetslist>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-drawer-container>
+<!-- topDriversList -->
+<!-- <topCoachableDriversList> -->
+<!-- 
+  <div fxLayout="column">
+    <app-event [topDrivers]="topCoachableDriversList"  [tableName]="'CoachableDrivers'"></app-event>
+  </div> -->
